@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crowdless — A simple solution to over-tourism.</title>
+  <meta name="description" content="Crowdless forecasts crowded places and guides travelers to great nearby alternatives — better trips, healthier local communities." />
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-bar">
+      <a class="logo" href="#hero">
+        <img src="crowdless_logo_2.png" alt="Crowdless logo" />
+      </a>
+      <nav id="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#team">Team</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="container reveal">
+    <h1 class="tagline accent">A simple solution to over-tourism.</h1>
+    <p class="subtitle">We forecast busy spots and guide travelers to great nearby alternatives — better trips for you, healthier flow for local communities.</p>
+    <div class="hero-badges" aria-hidden="true">
+      <span class="badge">EU Space Tech</span>
+      <span class="badge">Copernicus & Galileo</span>
+      <span class="badge">Sustainable Tourism</span>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="reveal">
+    <div class="container">
+      <h2 class="accent">What Crowdless does</h2>
+      <p><strong>Crowdless</strong> helps you avoid overcrowded areas. It estimates how busy popular places will be and suggests quieter, high‑quality alternatives nearby. The goal: shorter lines, calmer visits, and a fairer spread of visitors across a city or region.</p>
+      <p>Under the hood, Crowdless learns from European Earth‑observation data (Copernicus Sentinel satellites) and location signals powered by Galileo. You don’t need to understand the tech — you just open a simple map, see when and where it’s busy, and pick the right time or another great place to go.</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="reveal">
+    <div class="container">
+      <h2 class="accent" style="text-align:center; margin-bottom: 1.2rem;">Features & How it works</h2>
+      <div class="features-list">
+        <div class="feature-item">
+          <h3>Crowd forecasts</h3>
+          <p>See which spots will be busy soon so you can plan ahead instead of waiting in line.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Smart alternatives</h3>
+          <p>When a hotspot is packed, get instant suggestions for quieter, equally worthy places nearby.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Live map & alerts</h3>
+          <p>Check a clean map view and get notifications that nudge you at the right moment.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Built on EU space tech</h3>
+          <p>Insights from Copernicus imagery and Galileo positioning make predictions timely and reliable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="people-toggle" class="people-toggle" role="group" aria-label="Toggle people view">
+    <label class="switch" for="peopleToggle">
+        <input type="checkbox" id="peopleToggle" aria-controls="team awards" aria-label="Toggle between The Team and Awards" />
+        <span class="track" aria-hidden="true">
+        <span class="option option-left active">The Team</span>
+        <span class="option option-right">Awards</span>
+        <span class="knob"></span>
+        </span>
+    </label>
+    </section>
+
+  <!-- Team -->
+  <section id="team" class="reveal">
+    <div class="container">
+      <h2 class="accent">The Team</h2>
+      <div class="team-members">
+        <div class="member">
+          <img src="https://via.placeholder.com/120" alt="Portrait of Mariglena Reci" />
+          <h3>Mariglena Reci</h3>
+          <p>Marketing & Product Design</p>
+        </div>
+        <div class="member">
+          <img src="https://via.placeholder.com/120" alt="Portrait of Stelios Rotas" />
+          <h3>Stelios Rotas</h3>
+          <p>Backend Developer</p>
+        </div>
+        <div class="member">
+          <img src="https://via.placeholder.com/120" alt="Portrait of Alex Gkiafis" />
+          <h3>Alex Gkiafis</h3>
+          <p>UI/UX Developer</p>
+        </div>
+        <div class="member">
+          <img src="https://via.placeholder.com/120" alt="Portrait of Panagiotis Thivaios" />
+          <h3>Panagiotis Thivaios</h3>
+          <p>Business Manager</p>
+        </div>
+        <div class="member">
+          <img src="https://via.placeholder.com/120" alt="Portrait of Theodoros Exarchos" />
+          <h3>Theodoros Exarchos</h3>
+          <p>Backend & Research</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section id="awards" class="reveal">
+    <div class="container">
+      <h2 class="accent">Awards & Recognition</h2>
+      <div class="awards-wrap">
+        <div class="award">1st Place — CASSINI Hackathon (Greece, 2025)</div>
+        <div class="award">Qualified for the European Finals</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section id="contact" class="reveal">
+    <div class="container">
+      <h2>Get in touch</h2>
+      <p>Talk with the team about pilots, partnerships, or the product roadmap.</p>
+      <a class="contact-btn" href="mailto:crowdless.team@example.com">Contact us</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© 2025 Crowdless Team. All rights reserved.</div>
+  </footer>
+
+    <script>
+    // ===== Mobile menu toggle (class-based, μόνο ≤700px) =====
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('nav-links');
+    const mql = window.matchMedia('(max-width: 700px)');
+
+    function setAria() {
+        menuToggle.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
+        menuToggle.setAttribute('aria-label', nav.classList.contains('open') ? 'Close menu' : 'Open menu');
+    }
+
+    menuToggle.addEventListener('click', () => {
+        if (!mql.matches) return;       // αγνόησε desktop
+        nav.classList.toggle('open');   // χωρίς inline styles
+        setAria();
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!mql.matches) return;       // αγνόησε desktop
+        if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+        nav.classList.remove('open');
+        setAria();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (!mql.matches) {             // σε desktop καθάρισε mobile κατάσταση
+        nav.classList.remove('open');
+        setAria();
+        }
+    });
+
+    // ===== Reveal on scroll (όπως πριν) =====
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+            }
+        });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    } else {
+        document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in-view'));
+    }
+
+    // ===== People/Awards toggle =====
+    const peopleToggle = document.getElementById('peopleToggle');
+    const teamSection = document.getElementById('team');
+    const awardsSection = document.getElementById('awards');
+    const optionLeft = document.querySelector('.switch .option-left');
+    const optionRight = document.querySelector('.switch .option-right');
+
+    function applyPeopleView(showAwards){
+    if (showAwards) {
+        teamSection.setAttribute('hidden','');
+        awardsSection.removeAttribute('hidden');
+        optionLeft.classList.remove('active');
+        optionRight.classList.add('active');
+    } else {
+        awardsSection.setAttribute('hidden','');
+        teamSection.removeAttribute('hidden');
+        optionRight.classList.remove('active');
+        optionLeft.classList.add('active');
+    }
+    }
+
+    applyPeopleView(peopleToggle.checked);
+
+    peopleToggle.addEventListener('change', e => {
+    applyPeopleView(e.target.checked);
+    });
+
+    // optional nav sync
+    const teamLink = document.querySelector('a[href="#team"]');
+    const awardsLink = document.querySelector('a[href="#awards"]');
+    function focusToggle(){ document.getElementById('people-toggle')?.scrollIntoView({behavior:'smooth',block:'start'}); }
+    teamLink?.addEventListener('click', () => { peopleToggle.checked = false; applyPeopleView(false); focusToggle(); });
+    awardsLink?.addEventListener('click', () => { peopleToggle.checked = true; applyPeopleView(true); focusToggle(); });
+
+
+    </script>
+</body>
+</html>
