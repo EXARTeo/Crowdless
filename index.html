@@ -1,243 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Crowdless — A simple solution to over-tourism.</title>
-  <meta name="description" content="Crowdless forecasts crowded places and guides travelers to great nearby alternatives — better trips, healthier local communities." />
-
-  <!-- icon -->
+  <title>Crowdless &mdash; AI-Powered Urban Flow Intelligence</title>
+  <meta name="description" content="Crowdless AI Engine v2 &mdash; A reinforcement learning control layer that prevents self-induced crowding by balancing city congestion and user experience in real time." />
   <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Crowdless — A simple solution to over-tourism.">
-  <meta property="og:description" content="We forecast busy spots and guide travelers to great nearby alternatives.">
+  <meta property="og:title" content="Crowdless &mdash; AI-Powered Urban Flow Intelligence">
+  <meta property="og:description" content="Beyond predictions. The RL control layer that learns from its own recommendations.">
   <meta property="og:image" content="LOGO.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="LOGO.png">
 
-  <link rel="stylesheet" href="styles.css"/>
+  <!-- Inter — premium tech typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
-
 <body>
-  <!-- Header -->
-  <header>
+
+  <!-- Mobile nav backdrop -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <!-- ── Header ─────────────────────────────────────────────────── -->
+  <header id="site-header">
     <div class="container header-bar">
       <a class="logo" href="#hero">
-        <img src="Logo_Leters.png" alt="Crowdless logo" />
+        <img src="Logo_Leters.png" alt="Crowdless" />
       </a>
       <nav id="nav-links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#team">Team</a>
-        <a href="#awards">Awards</a>
-        <a href="#contact">Contact</a>
+        <a href="#engine">The Engine</a>
+        <a href="#signals">Signals</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#people-toggle">Team</a>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
       </nav>
-      <button class="menu-toggle" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+      <button class="menu-toggle" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="hero" class="container reveal">
-    <h1 class="tagline accent">A simple solution to over-tourism.</h1>
-    <p class="subtitle">We forecast busy spots and guide travelers to great nearby alternatives — better trips for you, healthier flow for local communities.</p>
-    <div class="hero-badges" aria-hidden="true">
-      <span class="badge">EU Space Tech</span>
-      <span class="badge">Copernicus & Galileo</span>
-      <span class="badge">Sustainable Tourism</span>
+  <!-- ── Hero ───────────────────────────────────────────────────── -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="container hero-content reveal">
+      <div class="hero-badge">
+        <span class="badge-pulse"></span>
+        Crowdless AI Engine v2 &mdash; In Development
+      </div>
+      <h1>Stop predicting crowds.<br><span class="gradient-text">Start preventing them.</span></h1>
+      <p class="hero-sub">A reinforcement learning control layer that doesn&rsquo;t just forecast &mdash; it learns from its own recommendations, preventing self-induced crowding while optimizing city flow and user experience simultaneously.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Request a Demo</a>
+        <a href="#engine" class="btn btn-ghost">See how it works &rarr;</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="reveal">
-    <div class="container">
-      <h2 class="accent">What Crowdless does</h2>
-      <p><strong>Crowdless</strong> helps you avoid overcrowded areas. It estimates how busy popular places will be and suggests quieter, high‑quality alternatives nearby. The goal: shorter lines, calmer visits, and a fairer spread of visitors across a city or region.</p>
-      <p>Under the hood, Crowdless learns from European Earth‑observation data (Copernicus Sentinel satellites) and location signals powered by Galileo. You don’t need to understand the tech — you just open a simple map, see when and where it’s busy, and pick the right time or another great place to go.</p>
+  <!-- ── Proof Bar ───────────────────────────────────────────────── -->
+  <div class="proof-bar">
+    <div class="container proof-inner">
+      <div class="proof-item">
+        <span class="proof-tag proof-tag-gold">1st</span>
+        <span>CASSINI Hackathon &mdash; Greece 2025</span>
+      </div>
+      <div class="proof-sep" aria-hidden="true"></div>
+      <div class="proof-item">
+        <span class="proof-tag proof-tag-blue">EU</span>
+        <span>Qualified &mdash; European Finals</span>
+      </div>
+      <div class="proof-sep" aria-hidden="true"></div>
+      <div class="proof-item proof-item-tags">
+        <span class="proof-tag">RL Policy</span>
+        <span class="proof-tag">Feedback Loop</span>
+        <span class="proof-tag">Real-time Control</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Problem ─────────────────────────────────────────────────── -->
+  <section id="problem" class="section-block reveal">
+    <div class="container problem-wrap">
+      <p class="section-label">The Core Problem</p>
+      <h2>Recommending alternatives at scale<br class="br-hide"> creates new crowds.</h2>
+      <p class="problem-desc">Classic prediction-only systems have a fatal flaw: when a platform sends thousands of users to the same &ldquo;quiet&rdquo; alternative, it becomes the next hotspot. The recommendation itself is the source of congestion. Crowdless is the first system built to be aware of its own footprint.</p>
     </div>
   </section>
 
-  <!-- Features -->
-  <section id="features" class="reveal">
+  <!-- ── Engine ──────────────────────────────────────────────────── -->
+  <section id="engine" class="section-block section-alt">
     <div class="container">
-      <h2 class="accent" style="text-align:center; margin-bottom: 1.2rem;">Features & How it works</h2>
-      <div class="features-list">
-        <div class="feature-item">
-          <h3>Crowd forecasts</h3>
-          <p>See which spots will be busy soon so you can plan ahead instead of waiting in line.</p>
+      <div class="section-header reveal">
+        <p class="section-label">Crowdless AI Engine v2</p>
+        <h2>Three layers. One intelligent system.</h2>
+        <p class="section-sub">A forecast-aware, feedback-aware recommendation system. Each layer builds on the last, creating a closed-loop control policy that adapts in real time.</p>
+      </div>
+
+      <div class="layers-grid">
+        <div class="layer-card reveal">
+          <div class="layer-num">01</div>
+          <span class="layer-badge">Base Recommender</span>
+          <h3>Demand Prior &amp; Live State</h3>
+          <p>We ingest external crowd forecasts via BestTime combined with live venue occupancy and queue depth. This forms the ground truth &mdash; where people are, and where they are about to go.</p>
+          <ul class="layer-list">
+            <li>BestTime demand forecasts</li>
+            <li>Live venue occupancy</li>
+            <li>Queue depth signals</li>
+          </ul>
         </div>
-        <div class="feature-item">
-          <h3>Smart alternatives</h3>
-          <p>When a hotspot is packed, get instant suggestions for quieter, equally worthy places nearby.</p>
+
+        <div class="layer-card reveal">
+          <div class="layer-num">02</div>
+          <span class="layer-badge">Signal Aggregator</span>
+          <h3>Platform Feedback Loop</h3>
+          <p>We monitor our own platform&rsquo;s behavior. How many recommendations were sent to this venue? How many users accepted and are currently navigating there? This closes the loop.</p>
+          <ul class="layer-list">
+            <li>Recommendations sent &amp; accepted</li>
+            <li>Users currently en-route</li>
+            <li>Self-induced traffic estimation</li>
+          </ul>
         </div>
-        <div class="feature-item">
-          <h3>Live map & alerts</h3>
-          <p>Check a clean map view and get notifications that nudge you at the right moment.</p>
-        </div>
-        <div class="feature-item">
-          <h3>Built on EU space tech</h3>
-          <p>Insights from Copernicus imagery and Galileo positioning make predictions timely and reliable.</p>
+
+        <div class="layer-card reveal">
+          <div class="layer-num">03</div>
+          <span class="layer-badge">RL Control Policy</span>
+          <h3>Reinforcement Learning Controller</h3>
+          <p>A learned policy that dynamically adjusts recommendation pressure per venue. It trades off city congestion against user friction &mdash; minimizing overflow risk and extra walking simultaneously.</p>
+          <ul class="layer-list">
+            <li>Dynamic per-venue penalty adjustment</li>
+            <li>Urban efficiency vs. UX balance</li>
+            <li>Learns from user cost signals</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-    <section id="people-toggle" class="people-toggle" role="group" aria-label="Toggle people view">
-    <label class="switch" for="peopleToggle">
-        <input type="checkbox" id="peopleToggle" aria-controls="team awards" aria-label="Toggle between The Team and Awards" />
-        <span class="track" aria-hidden="true">
-        <span class="option option-left active">The Team</span>
-        <span class="option option-right">Awards</span>
-        <span class="knob"></span>
-        </span>
-    </label>
-    </section>
-
-  <!-- Team -->
-  <section id="team" class="reveal">
+  <!-- ── Signals ─────────────────────────────────────────────────── -->
+  <section id="signals" class="section-block reveal">
     <div class="container">
-      <h2 class="accent">The Team</h2>
-      <div class="team-members">
-        <div class="member">
-          <img src="https://via.placeholder.com/120" alt="Portrait of Mariglena Reci" />
-          <h3>Mariglena Reci</h3>
-          <p>Marketing & Product Design</p>
+      <div class="section-header">
+        <p class="section-label">The Control Signals</p>
+        <h2>Three signals. One decision.</h2>
+        <p class="section-sub">For every venue, at every moment, the RL policy computes three core signals and transforms them into a dynamic recommendation penalty.</p>
+      </div>
+
+      <div class="signals-grid">
+        <div class="signal-card">
+          <div class="signal-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          </div>
+          <h3>Demand Pressure</h3>
+          <p>The baseline forecast of how many people want to visit this venue &mdash; derived from external priors and historical demand patterns.</p>
+          <div class="signal-meter" aria-hidden="true">
+            <div class="signal-bar" style="--fill: 72%"></div>
+          </div>
+          <span class="signal-level signal-high">High</span>
         </div>
-        <div class="member">
-          <img src="https://via.placeholder.com/120" alt="Portrait of Stelios Rotas" />
-          <h3>Stelios Rotas</h3>
-          <p>Backend Developer</p>
+
+        <div class="signal-card signal-card-featured">
+          <div class="signal-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3>Overflow Risk</h3>
+          <p>The probability the venue will exceed comfortable capacity &mdash; accounting for current demand <em>and</em> the recommendations already in-flight on our platform.</p>
+          <div class="signal-meter" aria-hidden="true">
+            <div class="signal-bar signal-bar-amber" style="--fill: 58%"></div>
+          </div>
+          <span class="signal-level signal-med">Moderate</span>
         </div>
-        <div class="member">
-          <img src="https://via.placeholder.com/120" alt="Portrait of Alex Gkiafis" />
-          <h3>Alex Gkiafis</h3>
-          <p>UI/UX Developer</p>
+
+        <div class="signal-card">
+          <div class="signal-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Recommendation Saturation</h3>
+          <p>How aggressively this venue is already being recommended to others. When saturation is high, the policy backs off &mdash; preserving the alternative&rsquo;s value.</p>
+          <div class="signal-meter" aria-hidden="true">
+            <div class="signal-bar signal-bar-green" style="--fill: 35%"></div>
+          </div>
+          <span class="signal-level signal-low">Low</span>
         </div>
-        <div class="member">
-          <img src="https://via.placeholder.com/120" alt="Portrait of Panagiotis Thivaios" />
-          <h3>Panagiotis Thivaios</h3>
-          <p>Business Manager</p>
-        </div>
-        <div class="member">
-          <img src="https://via.placeholder.com/120" alt="Portrait of Theodoros Exarchos" />
-          <h3>Theodoros Exarchos</h3>
-          <p>Backend & Research</p>
+      </div>
+
+      <div class="formula-row">
+        <span class="formula-label">Policy Output</span>
+        <div class="formula-eq">
+          <span class="chip">Demand Pressure</span>
+          <span class="chip-op">+</span>
+          <span class="chip">Overflow Risk</span>
+          <span class="chip-op">+</span>
+          <span class="chip">Rec. Saturation</span>
+          <span class="chip-op">=</span>
+          <span class="chip chip-result">Dynamic Penalty &rarr; Adjusted Rank</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Awards -->
-  <section id="awards" class="reveal">
+  <!-- ── Benefits ────────────────────────────────────────────────── -->
+  <section id="benefits" class="section-block section-alt reveal">
     <div class="container">
-      <h2 class="accent">Awards & Recognition</h2>
-      <div class="awards-wrap">
-        <div class="award">1st Place — CASSINI Hackathon (Greece, 2025)</div>
-        <div class="award">Qualified for the European Finals</div>
+      <div class="section-header">
+        <p class="section-label">Who Benefits</p>
+        <h2>Built for people.<br>Designed for cities.</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefits-col">
+          <div class="benefits-head">
+            <div class="benefits-icon-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <span>For Travelers</span>
+          </div>
+          <ul class="benefits-list">
+            <li>
+              <span class="check-icon" aria-hidden="true"></span>
+              <div>
+                <strong>No more second-crowd trap</strong>
+                <p>Get alternatives that are genuinely quiet &mdash; not the last place we sent 800 other users to.</p>
+              </div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true"></span>
+              <div>
+                <strong>Friction-aware routing</strong>
+                <p>The policy minimizes extra walking distance and retries. Your time is a cost signal the AI actively optimizes for.</p>
+              </div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true"></span>
+              <div>
+                <strong>Accurate arrivals</strong>
+                <p>Arrive at venues that are at the occupancy we predicted &mdash; not over-capacity from our own recommendations.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="benefits-divider" aria-hidden="true"></div>
+
+        <div class="benefits-col">
+          <div class="benefits-head">
+            <div class="benefits-icon-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <span>For Cities &amp; Operators</span>
+          </div>
+          <ul class="benefits-list">
+            <li>
+              <span class="check-icon" aria-hidden="true"></span>
+              <div>
+                <strong>Reduced peak concentration</strong>
+                <p>Visitor flow is distributed across venues and time windows &mdash; reducing hotspot congestion by design.</p>
+              </div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true"></span>
+              <div>
+                <strong>Self-correcting system</strong>
+                <p>The RL policy learns when it over-recommends and automatically backs off. No manual tuning required.</p>
+              </div>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true"></span>
+              <div>
+                <strong>Equitable traffic distribution</strong>
+                <p>Visitor load is shared fairly across local businesses and cultural sites &mdash; not funneled to the same handful.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact / CTA -->
-  <section id="contact" class="reveal">
+  <!-- ── People Toggle ────────────────────────────────────────────── -->
+  <section id="people-toggle" class="section-block reveal">
     <div class="container">
-      <h2>Get in touch</h2>
-      <p>Talk with the team about pilots, partnerships, or the product roadmap.</p>
-      <a class="contact-btn" href="mailto:crowdless.team@example.com">Contact us</a>
+      <div class="toggle-header">
+        <p class="section-label">People &amp; Recognition</p>
+        <label class="toggle-switch" for="peopleToggle">
+          <input type="checkbox" id="peopleToggle" aria-controls="team-panel awards-panel" />
+          <div class="toggle-track">
+            <span class="tog-opt tog-left active">The Team</span>
+            <span class="tog-opt tog-right">Awards</span>
+            <div class="toggle-knob"></div>
+          </div>
+        </label>
+      </div>
+
+      <!-- Team panel -->
+      <div id="team-panel">
+        <div class="team-grid">
+          <div class="member-card">
+            <div class="member-avatar">MR</div>
+            <h3>Mariglena Reci</h3>
+            <p>Marketing &amp; Product Design</p>
+          </div>
+          <div class="member-card">
+            <div class="member-avatar">SR</div>
+            <h3>Stelios Rotas</h3>
+            <p>Backend Developer</p>
+          </div>
+          <div class="member-card">
+            <div class="member-avatar">AG</div>
+            <h3>Alex Gkiafis</h3>
+            <p>UI/UX Developer</p>
+          </div>
+          <div class="member-card">
+            <div class="member-avatar">PT</div>
+            <h3>Panagiotis Thivaios</h3>
+            <p>Business Manager</p>
+          </div>
+          <div class="member-card">
+            <div class="member-avatar">TE</div>
+            <h3>Theodoros Exarchos</h3>
+            <p>Backend &amp; Research</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Awards panel -->
+      <div id="awards-panel" hidden>
+        <div class="awards-grid">
+          <div class="award-card award-gold">
+            <div class="award-rank">1st</div>
+            <div>
+              <h3>CASSINI Hackathon</h3>
+              <p>Greece &mdash; 2025 National Winner</p>
+            </div>
+          </div>
+          <div class="award-card">
+            <div class="award-rank award-rank-blue">EU</div>
+            <div>
+              <h3>European Finals</h3>
+              <p>Qualified for pan-European competition</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- ── Contact ─────────────────────────────────────────────────── -->
+  <section id="contact" class="section-block contact-section reveal">
+    <div class="contact-glow" aria-hidden="true"></div>
+    <div class="container contact-inner">
+      <p class="section-label section-label-inv">Contact</p>
+      <h2>Ready to bring intelligent<br>flow to your city?</h2>
+      <p>Talk to the Crowdless team about pilots, city partnerships, and platform integrations.</p>
+      <a class="btn btn-contact" href="mailto:crowdless.team@gmail.com">Contact the Team</a>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────────────── -->
   <footer>
-    <div class="container">© 2025 Crowdless Team. All rights reserved.</div>
+    <div class="container footer-inner">
+      <img src="Logo_Leters.png" alt="Crowdless" class="footer-logo" />
+      <span class="footer-copy">&copy; 2025 Crowdless Team &middot; All rights reserved</span>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#engine">Engine</a>
+        <a href="#signals">Signals</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </footer>
 
-    <script>
-    // ===== Mobile menu toggle (class-based, μόνο ≤700px) =====
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.getElementById('nav-links');
-    const mql = window.matchMedia('(max-width: 700px)');
+  <script>
+    // ── Mobile nav ──────────────────────────────────────────────────
+    const menuToggle  = document.querySelector('.menu-toggle');
+    const nav         = document.getElementById('nav-links');
+    const navOverlay  = document.getElementById('nav-overlay');
+    const siteHeader  = document.getElementById('site-header');
+    const mql         = window.matchMedia('(max-width: 768px)');
 
-    function setAria() {
-        menuToggle.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
-        menuToggle.setAttribute('aria-label', nav.classList.contains('open') ? 'Close menu' : 'Open menu');
+    function openNav() {
+      nav.classList.add('open');
+      navOverlay.classList.add('visible');
+      document.body.classList.add('nav-open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      menuToggle.setAttribute('aria-label', 'Close menu');
+    }
+    function closeNav() {
+      nav.classList.remove('open');
+      navOverlay.classList.remove('visible');
+      document.body.classList.remove('nav-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open menu');
     }
 
     menuToggle.addEventListener('click', () => {
-        if (!mql.matches) return;       // αγνόησε desktop
-        nav.classList.toggle('open');   // χωρίς inline styles
-        setAria();
+      if (!mql.matches) return;
+      nav.classList.contains('open') ? closeNav() : openNav();
     });
+    navOverlay.addEventListener('click', closeNav);
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { if (mql.matches) closeNav(); }));
+    window.addEventListener('resize', () => { if (!mql.matches) closeNav(); });
 
-    document.addEventListener('click', (e) => {
-        if (!mql.matches) return;       // αγνόησε desktop
-        if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
-        nav.classList.remove('open');
-        setAria();
-        }
-    });
+    // ── Scrolled-header style ────────────────────────────────────────
+    window.addEventListener('scroll', () => {
+      siteHeader.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
 
-    window.addEventListener('resize', () => {
-        if (!mql.matches) {             // σε desktop καθάρισε mobile κατάσταση
-        nav.classList.remove('open');
-        setAria();
-        }
-    });
-
-    // ===== Reveal on scroll (όπως πριν) =====
+    // ── Reveal on scroll ─────────────────────────────────────────────
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!prefersReduced && 'IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            io.unobserve(entry.target);
-            }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); }
         });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+      }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     } else {
-        document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in-view'));
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in-view'));
     }
 
-    // ===== People/Awards toggle =====
+    // ── Team / Awards toggle ─────────────────────────────────────────
     const peopleToggle = document.getElementById('peopleToggle');
-    const teamSection = document.getElementById('team');
-    const awardsSection = document.getElementById('awards');
-    const optionLeft = document.querySelector('.switch .option-left');
-    const optionRight = document.querySelector('.switch .option-right');
+    const teamPanel    = document.getElementById('team-panel');
+    const awardsPanel  = document.getElementById('awards-panel');
+    const togLeft      = document.querySelector('.tog-left');
+    const togRight     = document.querySelector('.tog-right');
 
-    function applyPeopleView(showAwards){
-    if (showAwards) {
-        teamSection.setAttribute('hidden','');
-        awardsSection.removeAttribute('hidden');
-        optionLeft.classList.remove('active');
-        optionRight.classList.add('active');
-    } else {
-        awardsSection.setAttribute('hidden','');
-        teamSection.removeAttribute('hidden');
-        optionRight.classList.remove('active');
-        optionLeft.classList.add('active');
+    function applyView(showAwards) {
+      teamPanel.toggleAttribute('hidden', showAwards);
+      awardsPanel.toggleAttribute('hidden', !showAwards);
+      togLeft.classList.toggle('active', !showAwards);
+      togRight.classList.toggle('active', showAwards);
     }
-    }
+    applyView(peopleToggle.checked);
+    peopleToggle.addEventListener('change', e => applyView(e.target.checked));
 
-    applyPeopleView(peopleToggle.checked);
-
-    peopleToggle.addEventListener('change', e => {
-    applyPeopleView(e.target.checked);
+    // Nav link — scroll to toggle section
+    document.querySelector('a[href="#people-toggle"]')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('people-toggle')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
-
-    // optional nav sync
-    const teamLink = document.querySelector('a[href="#team"]');
-    const awardsLink = document.querySelector('a[href="#awards"]');
-    function focusToggle(){ document.getElementById('people-toggle')?.scrollIntoView({behavior:'smooth',block:'start'}); }
-    teamLink?.addEventListener('click', () => { peopleToggle.checked = false; applyPeopleView(false); focusToggle(); });
-    awardsLink?.addEventListener('click', () => { peopleToggle.checked = true; applyPeopleView(true); focusToggle(); });
-
-
-    </script>
+  </script>
 </body>
 </html>
