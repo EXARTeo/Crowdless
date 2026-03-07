@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crowdless &mdash; AI-Powered Urban Flow Intelligence</title>
-  <meta name="description" content="Crowdless AI Engine v2 &mdash; A reinforcement learning control layer that prevents self-induced crowding by balancing city congestion and user experience in real time." />
+  <meta name="description" content="Crowdless helps you avoid crowds by learning from its own recommendations in real time." />
   <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any">
 
   <!-- Open Graph -->
@@ -34,8 +34,8 @@
         <img src="Logo_Leters.png" alt="Crowdless" />
       </a>
       <nav id="nav-links" aria-label="Primary">
-        <a href="#engine">The Engine</a>
-        <a href="#signals">Signals</a>
+        <a href="#quick-access">Quick Access</a>
+        <a href="#pipeline">How It Works</a>
         <a href="#benefits">Benefits</a>
         <a href="#people-toggle">Team</a>
         <a href="#contact" class="nav-cta">Get in Touch</a>
@@ -63,10 +63,10 @@
         Crowdless AI Engine v2 &mdash; In Development
       </div>
       <h1>Stop predicting crowds.<br><span class="gradient-text">Start preventing them.</span></h1>
-      <p class="hero-sub">A reinforcement learning control layer that doesn&rsquo;t just forecast &mdash; it learns from its own recommendations, preventing self-induced crowding while optimizing city flow and user experience simultaneously.</p>
+      <p class="hero-sub">The app that optimizes city flow and user experience in real time, providing personalized recommendations based on each user's preferences.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Request a Demo</a>
-        <a href="#engine" class="btn btn-ghost">See how it works &rarr;</a>
+        <a href="https://TODO_PUT_HERE.com" target="_blank" rel="noopener" class="btn btn-primary btn-hero-lg">Open Web App</a>
+        <a href="./Crowdless.apk" class="btn btn-ghost btn-hero-lg">Download APK &darr;</a>
       </div>
     </div>
 
@@ -100,118 +100,86 @@
   <section id="problem" class="section-block reveal">
     <div class="container problem-wrap">
       <p class="section-label">The Core Problem</p>
-      <h2>Recommending alternatives at scale<br class="br-hide"> creates new crowds.</h2>
-      <p class="problem-desc">Classic prediction-only systems have a fatal flaw: when a platform sends thousands of users to the same &ldquo;quiet&rdquo; alternative, it becomes the next hotspot. The recommendation itself is the source of congestion. Crowdless is the first system built to be aware of its own footprint.</p>
+      <h2 style="color: #052c38;">Recommending alternatives at scale<br class="br-hide"> creates new crowds.</h2>
+      <p class="problem-desc">Classic systems send everyone to the same &ldquo;quiet&rdquo; alternative &mdash; making it the next hotspot. Crowdless is built to be aware of its own impact.</p>
     </div>
   </section>
 
-  <!-- ── Engine ──────────────────────────────────────────────────── -->
-  <section id="engine" class="section-block section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-label">Crowdless AI Engine v2</p>
-        <h2>Three layers. One intelligent system.</h2>
-        <p class="section-sub">A forecast-aware, feedback-aware recommendation system. Each layer builds on the last, creating a closed-loop control policy that adapts in real time.</p>
-      </div>
-
-      <div class="layers-grid">
-        <div class="layer-card reveal">
-          <div class="layer-num">01</div>
-          <span class="layer-badge">Base Recommender</span>
-          <h3>Demand Prior &amp; Live State</h3>
-          <p>We ingest external crowd forecasts via BestTime combined with live venue occupancy and queue depth. This forms the ground truth &mdash; where people are, and where they are about to go.</p>
-          <ul class="layer-list">
-            <li>BestTime demand forecasts</li>
-            <li>Live venue occupancy</li>
-            <li>Queue depth signals</li>
-          </ul>
-        </div>
-
-        <div class="layer-card reveal">
-          <div class="layer-num">02</div>
-          <span class="layer-badge">Signal Aggregator</span>
-          <h3>Platform Feedback Loop</h3>
-          <p>We monitor our own platform&rsquo;s behavior. How many recommendations were sent to this venue? How many users accepted and are currently navigating there? This closes the loop.</p>
-          <ul class="layer-list">
-            <li>Recommendations sent &amp; accepted</li>
-            <li>Users currently en-route</li>
-            <li>Self-induced traffic estimation</li>
-          </ul>
-        </div>
-
-        <div class="layer-card reveal">
-          <div class="layer-num">03</div>
-          <span class="layer-badge">RL Control Policy</span>
-          <h3>Reinforcement Learning Controller</h3>
-          <p>A learned policy that dynamically adjusts recommendation pressure per venue. It trades off city congestion against user friction &mdash; minimizing overflow risk and extra walking simultaneously.</p>
-          <ul class="layer-list">
-            <li>Dynamic per-venue penalty adjustment</li>
-            <li>Urban efficiency vs. UX balance</li>
-            <li>Learns from user cost signals</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Signals ─────────────────────────────────────────────────── -->
-  <section id="signals" class="section-block reveal">
+  <!-- ── Pipeline (How It Works) ─────────────────────────────────── -->
+  <section id="pipeline" class="section-block section-alt reveal">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">The Control Signals</p>
-        <h2>Three signals. One decision.</h2>
-        <p class="section-sub">For every venue, at every moment, the RL policy computes three core signals and transforms them into a dynamic recommendation penalty.</p>
+        <p class="section-label">How It Works</p>
+        <h2 style="color: #052c38;">A reinforcement learning loop.</h2>
+        <p class="section-sub">Crowdless learns from the outcomes of its own recommendations, closing the loop so predictions get smarter over time.</p>
       </div>
 
-      <div class="signals-grid">
-        <div class="signal-card">
-          <div class="signal-icon-wrap">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-          </div>
-          <h3>Demand Pressure</h3>
-          <p>The baseline forecast of how many people want to visit this venue &mdash; derived from external priors and historical demand patterns.</p>
-          <div class="signal-meter" aria-hidden="true">
-            <div class="signal-bar" style="--fill: 72%"></div>
-          </div>
-          <span class="signal-level signal-high">High</span>
-        </div>
+      <div class="pipeline-diagram">
+        <svg viewBox="0 0 1060 380" xmlns="http://www.w3.org/2000/svg" aria-label="Crowdless reinforcement learning pipeline flowchart">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0 L10 3.5 L0 7 Z" fill="var(--acc-mid)" />
+            </marker>
+            <marker id="arrow-feedback" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0 L10 3.5 L0 7 Z" fill="#0891b2" />
+            </marker>
+            <filter id="node-shadow">
+              <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="rgba(6,182,212,0.18)" />
+            </filter>
+          </defs>
 
-        <div class="signal-card signal-card-featured">
-          <div class="signal-icon-wrap">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          </div>
-          <h3>Overflow Risk</h3>
-          <p>The probability the venue will exceed comfortable capacity &mdash; accounting for current demand <em>and</em> the recommendations already in-flight on our platform.</p>
-          <div class="signal-meter" aria-hidden="true">
-            <div class="signal-bar signal-bar-amber" style="--fill: 58%"></div>
-          </div>
-          <span class="signal-level signal-med">Moderate</span>
-        </div>
+          <!-- ── Input Nodes (left column) ── -->
 
-        <div class="signal-card">
-          <div class="signal-icon-wrap">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
-          <h3>Recommendation Saturation</h3>
-          <p>How aggressively this venue is already being recommended to others. When saturation is high, the policy backs off &mdash; preserving the alternative&rsquo;s value.</p>
-          <div class="signal-meter" aria-hidden="true">
-            <div class="signal-bar signal-bar-green" style="--fill: 35%"></div>
-          </div>
-          <span class="signal-level signal-low">Low</span>
-        </div>
-      </div>
+          <!-- Node 1: Foot Traffic Data (top-left) -->
+          <rect x="0" y="40" width="160" height="56" rx="12" fill="var(--bg-card)" stroke="var(--bdr)" stroke-width="1.5" filter="url(#node-shadow)" />
+          <text x="80" y="64" text-anchor="middle" fill="var(--t-1)" font-size="12" font-weight="700" font-family="Inter, sans-serif">Foot Traffic</text>
+          <text x="80" y="81" text-anchor="middle" fill="var(--t-2)" font-size="11" font-family="Inter, sans-serif">Data</text>
 
-      <div class="formula-row">
-        <span class="formula-label">Policy Output</span>
-        <div class="formula-eq">
-          <span class="chip">Demand Pressure</span>
-          <span class="chip-op">+</span>
-          <span class="chip">Overflow Risk</span>
-          <span class="chip-op">+</span>
-          <span class="chip">Rec. Saturation</span>
-          <span class="chip-op">=</span>
-          <span class="chip chip-result">Dynamic Penalty &rarr; Adjusted Rank</span>
-        </div>
+          <!-- Node 2: Candidate Places (middle-left) -->
+          <rect x="0" y="130" width="160" height="56" rx="12" fill="var(--bg-card)" stroke="var(--bdr)" stroke-width="1.5" filter="url(#node-shadow)" />
+          <text x="80" y="153" text-anchor="middle" fill="var(--t-1)" font-size="12" font-weight="700" font-family="Inter, sans-serif">Candidate Places</text>
+          <text x="80" y="172" text-anchor="middle" fill="var(--t-2)" font-size="10.5" font-family="Inter, sans-serif">Location &amp; filters</text>
+
+          <!-- Node 3: App Tracking Data (bottom-left) -->
+          <rect x="0" y="220" width="160" height="56" rx="12" fill="var(--bg-card)" stroke="var(--bdr)" stroke-width="1.5" filter="url(#node-shadow)" />
+          <text x="80" y="244" text-anchor="middle" fill="var(--t-1)" font-size="12" font-weight="700" font-family="Inter, sans-serif">App Tracking</text>
+          <text x="80" y="261" text-anchor="middle" fill="var(--t-2)" font-size="11" font-family="Inter, sans-serif">Data</text>
+
+          <!-- ── Arrows: inputs → RL Model ── -->
+          <path d="M160 68 L270 138" stroke="var(--acc-mid)" stroke-width="2" fill="none" marker-end="url(#arrow)" class="flow-line" />
+          <path d="M160 158 L270 158" stroke="var(--acc-mid)" stroke-width="2" fill="none" marker-end="url(#arrow)" class="flow-line" />
+          <path d="M160 248 L270 178" stroke="var(--acc-mid)" stroke-width="2" fill="none" marker-end="url(#arrow)" class="flow-line" />
+
+          <!-- ── Node 4: RL Model (central, highlighted) ── -->
+          <rect x="280" y="120" width="180" height="76" rx="14" fill="rgba(6,182,212,0.12)" stroke="var(--acc-mid)" stroke-width="2.5" filter="url(#node-shadow)" />
+          <text x="370" y="153" text-anchor="middle" fill="var(--acc)" font-size="14" font-weight="800" font-family="Inter, sans-serif">RL Model</text>
+          <text x="370" y="173" text-anchor="middle" fill="var(--t-2)" font-size="10.5" font-family="Inter, sans-serif">Reinforcement Learning</text>
+
+          <!-- Arrow: RL Model → Crowdness Risk -->
+          <line x1="460" y1="158" x2="555" y2="158" stroke="var(--acc-mid)" stroke-width="2" marker-end="url(#arrow)" class="flow-line" />
+
+          <!-- ── Node 5: Crowdness Risk Prediction ── -->
+          <rect x="565" y="124" width="180" height="68" rx="12" fill="var(--bg-card)" stroke="var(--acc-mid)" stroke-width="1.5" filter="url(#node-shadow)" />
+          <text x="655" y="153" text-anchor="middle" fill="var(--t-1)" font-size="12" font-weight="700" font-family="Inter, sans-serif">Crowdness Risk</text>
+          <text x="655" y="172" text-anchor="middle" fill="var(--t-2)" font-size="11" font-family="Inter, sans-serif">Prediction</text>
+
+          <!-- Arrow: Crowdness Risk → Recommendations -->
+          <line x1="745" y1="158" x2="835" y2="158" stroke="var(--acc-mid)" stroke-width="2" marker-end="url(#arrow)" class="flow-line" />
+
+          <!-- ── Node 6: Recommendations (final, highlighted) ── -->
+          <rect x="845" y="120" width="175" height="76" rx="14" fill="var(--acc-mid)" stroke="var(--acc)" stroke-width="1.5" filter="url(#node-shadow)" />
+          <text x="932" y="155" text-anchor="middle" fill="#fff" font-size="13" font-weight="800" font-family="Inter, sans-serif">Recommendations</text>
+          <text x="932" y="174" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="10.5" font-family="Inter, sans-serif">Smart &amp; crowd-aware</text>
+
+          <!-- ── Feedback Loop: Recommendations → RL Model ── -->
+          <path d="M932 196 L932 330 Q932 350 912 350 L390 350 Q370 350 370 330 L370 196"
+                stroke="#0891b2" stroke-width="2" fill="none"
+                marker-end="url(#arrow-feedback)" class="feedback-line" />
+
+          <!-- Feedback label -->
+          <text x="650" y="345" text-anchor="middle" fill="#0891b2" font-size="12" font-weight="700" font-family="Inter, sans-serif">Observe &amp; Learn</text>
+          <text x="650" y="362" text-anchor="middle" fill="var(--t-3)" font-size="10" font-family="Inter, sans-serif">feedback loop</text>
+        </svg>
       </div>
     </div>
   </section>
@@ -221,7 +189,7 @@
     <div class="container">
       <div class="section-header">
         <p class="section-label">Who Benefits</p>
-        <h2>Built for people.<br>Designed for cities.</h2>
+        <h2 style="color: #052c38;">Built for people.<br>Designed for cities.</h2>
       </div>
 
       <div class="benefits-grid">
@@ -237,21 +205,21 @@
               <span class="check-icon" aria-hidden="true"></span>
               <div>
                 <strong>No more second-crowd trap</strong>
-                <p>Get alternatives that are genuinely quiet &mdash; not the last place we sent 800 other users to.</p>
+                <p>Get recommendations that are genuinely quiet &mdash; not somewhere we already sent hundreds of users.</p>
               </div>
             </li>
             <li>
               <span class="check-icon" aria-hidden="true"></span>
               <div>
                 <strong>Friction-aware routing</strong>
-                <p>The policy minimizes extra walking distance and retries. Your time is a cost signal the AI actively optimizes for.</p>
+                <p>Minimizes extra walking distance. Your time is factored into every recommendation.</p>
               </div>
             </li>
             <li>
               <span class="check-icon" aria-hidden="true"></span>
               <div>
                 <strong>Accurate arrivals</strong>
-                <p>Arrive at venues that are at the occupancy we predicted &mdash; not over-capacity from our own recommendations.</p>
+                <p>Venues are at the occupancy we predicted &mdash; not over-capacity from our own recommendations.</p>
               </div>
             </li>
           </ul>
@@ -271,21 +239,21 @@
               <span class="check-icon" aria-hidden="true"></span>
               <div>
                 <strong>Reduced peak concentration</strong>
-                <p>Visitor flow is distributed across venues and time windows &mdash; reducing hotspot congestion by design.</p>
+                <p>Visitor flow is spread across venues and time windows, reducing hotspots.</p>
               </div>
             </li>
             <li>
               <span class="check-icon" aria-hidden="true"></span>
               <div>
                 <strong>Self-correcting system</strong>
-                <p>The RL policy learns when it over-recommends and automatically backs off. No manual tuning required.</p>
+                <p>The RL policy learns when it over-recommends and backs off automatically.</p>
               </div>
             </li>
             <li>
               <span class="check-icon" aria-hidden="true"></span>
               <div>
                 <strong>Equitable traffic distribution</strong>
-                <p>Visitor load is shared fairly across local businesses and cultural sites &mdash; not funneled to the same handful.</p>
+                <p>Visitor load is shared fairly across local businesses &mdash; not funneled to the same few.</p>
               </div>
             </li>
           </ul>
@@ -368,7 +336,7 @@
     <div class="container contact-inner">
       <p class="section-label section-label-inv">Contact</p>
       <h2>Ready to bring intelligent<br>flow to your city?</h2>
-      <p>Talk to the Crowdless team about pilots, city partnerships, and platform integrations.</p>
+      <p>Talk to the Crowdless team about pilots, partnerships, and integrations.</p>
       <a class="btn btn-contact" href="mailto:crowdless.team@gmail.com">Contact the Team</a>
     </div>
   </section>
@@ -379,8 +347,7 @@
       <img src="Logo_Leters.png" alt="Crowdless" class="footer-logo" />
       <span class="footer-copy">&copy; 2025 Crowdless Team &middot; All rights reserved</span>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="#engine">Engine</a>
-        <a href="#signals">Signals</a>
+        <a href="#pipeline">How It Works</a>
         <a href="#benefits">Benefits</a>
         <a href="#contact">Contact</a>
       </nav>
