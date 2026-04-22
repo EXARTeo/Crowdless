@@ -1,42 +1,50 @@
 /* ═══════════════════════════════════════════════════════════════════
-   CROWDLESS — Clean Signal (Light Mode)
-   Concept: White canvas × bioluminescent cyan
-   Precise, airy, data-driven. Like a city map in daylight.
+   CROWDLESS — Parchment & Teal
+   Brand palette: Jet Black, Dark Teal, Tropical Teal,
+                  Parchment, Spicy Paprika, Grey Olive
    ═══════════════════════════════════════════════════════════════════ */
 
 /* ── Design Tokens ─────────────────────────────────────────────────── */
 :root {
-  /* Backgrounds */
-  --bg:        #F5F5F5;
-  --bg-alt:    #f2f8fa;   /* very slight cool-cyan tint for alt sections */
-  --bg-card:   #F5F5F5;
-  --bg-card-h: #f7fcfd;
+  /* Brand palette */
+  --jet-black:     #052F3B;
+  --dark-teal:     #084C61;
+  --tropical-teal: #5FB3AC;
+  --parchment:     #F5F3EF;
+  --spicy-paprika: #D94F1A;
+  --grey-olive:    #7A8F85;
+
+  /* Backgrounds — Parchment throughout; alt sections differentiated by borders */
+  --bg:        #F5F3EF;   /* Parchment */
+  --bg-alt:    #F5F3EF;   /* Parchment (borders separate the sections) */
+  --bg-card:   #F5F3EF;   /* Parchment */
+  --bg-card-h: #F5F3EF;   /* Parchment */
 
   /* Borders */
-  --bdr:     #e0eaee;
-  --bdr-acc: rgba(6, 182, 212, 0.4);
+  --bdr:     #DDD7C9;
+  --bdr-acc: rgba(95, 179, 172, 0.4);
 
-  /* Accent — Cyan spectrum */
-  --acc:       #0891b2;   /* cyan-600 — text & dark UI on white  */
-  --acc-mid:   #06b6d4;   /* cyan-500 — primary interactive      */
-  --acc-light: #22d3ee;   /* cyan-400 — hover / glow             */
-  --acc-bright:#67e8f9;   /* cyan-300 — very light fills         */
-  --acc-glow:  rgba(6, 182, 212, 0.14);
+  /* Accent — interactive / UI chrome (Tropical Teal spectrum) */
+  --acc-mid:   #5FB3AC;   /* Tropical Teal — primary interactive */
+  --acc-light: #7DC6C0;   /* hover / glow                        */
+  --acc-bright:#B3DDD8;   /* very light fills                    */
+  --acc-glow:  rgba(95, 179, 172, 0.14);
 
-  /* Gold — awards only */
-  --gold: #d4a843;
+  /* Typography accent on light surfaces — Spicy Paprika paired with Jet Black */
+  --acc:  #D94F1A;
+  --gold: #D94F1A;   /* Spicy Paprika (awards)                  */
 
-  /* Text — cool dark (not pure black; has ocean in it) */
-  --t-1: #07192a;   /* primary   */
-  --t-2: #4a7080;   /* secondary */
-  --t-3: #91b0bc;   /* muted     */
+  /* Text — Jet Black + opacity tiers (paired with Paprika on light, Teal on dark) */
+  --t-1: #052F3B;               /* Jet Black — primary  */
+  --t-2: #052F3B;               /* Jet Black — body     */
+  --t-3: rgba(5, 47, 59, 0.55); /* muted Jet Black      */
 
   /* Layout */
   --radius:    16px;
   --radius-sm: 10px;
   --radius-xs: 6px;
   --card-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06);
-  --card-shadow-h: 0 4px 24px rgba(6,182,212,0.12), 0 1px 3px rgba(0,0,0,0.06), 0 0 0 1px rgba(6,182,212,0.2);
+  --card-shadow-h: 0 4px 24px rgba(95,179,172,0.12), 0 1px 3px rgba(0,0,0,0.06), 0 0 0 1px rgba(95,179,172,0.2);
 }
 
 /* ── Reset ─────────────────────────────────────────────────────────── */
@@ -66,7 +74,7 @@ em     { font-style: normal; color: var(--acc); }
   transition: background 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
 }
 #site-header.scrolled {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(245, 243, 239, 0.9);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid var(--bdr);
@@ -86,16 +94,16 @@ nav#nav-links a {
   padding: 0.45rem 0.8rem; border-radius: var(--radius-xs);
   transition: color 0.15s, background 0.15s;
 }
-nav#nav-links a:hover { color: var(--t-1); background: rgba(6,182,212,0.07); }
+nav#nav-links a:hover { color: var(--t-1); background: rgba(95,179,172,0.07); }
 nav#nav-links a:focus-visible { outline: 2px solid var(--acc); outline-offset: 2px; }
 nav#nav-links a.nav-cta {
   background: var(--acc-mid); color: #fff;
   border: 1px solid var(--acc-mid); font-weight: 600; margin-left: 0.6rem;
-  box-shadow: 0 2px 12px rgba(6,182,212,0.25);
+  box-shadow: 0 2px 12px rgba(95,179,172,0.25);
 }
 nav#nav-links a.nav-cta:hover {
   background: var(--acc-light); border-color: var(--acc-light);
-  box-shadow: 0 4px 18px rgba(6,182,212,0.35);
+  box-shadow: 0 4px 18px rgba(95,179,172,0.35);
 }
 
 /* Hamburger */
@@ -104,7 +112,7 @@ nav#nav-links a.nav-cta:hover {
   background: none; border: none; cursor: pointer;
   padding: 8px; border-radius: 8px; transition: background 0.15s;
 }
-.menu-toggle:hover { background: rgba(6,182,212,0.07); }
+.menu-toggle:hover { background: rgba(95,179,172,0.07); }
 .menu-toggle span {
   display: block; width: 22px; height: 2px; background: var(--t-1);
   border-radius: 2px; transition: transform 0.22s ease, opacity 0.22s ease;
@@ -116,7 +124,7 @@ nav#nav-links a.nav-cta:hover {
 /* Nav overlay */
 .nav-overlay {
   display: none; position: fixed; inset: 0;
-  background: rgba(7,25,42,0.35);
+  background: rgba(5,47,59,0.35);
   backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
   z-index: 150;
 }
@@ -132,19 +140,19 @@ body.nav-open { overflow: hidden; }
 }
 .btn-primary {
   background: var(--acc-mid); color: #fff;
-  box-shadow: 0 0 0 1px rgba(6,182,212,0.4), 0 6px 24px rgba(6,182,212,0.28);
+  box-shadow: 0 0 0 1px rgba(95,179,172,0.4), 0 6px 24px rgba(95,179,172,0.28);
 }
 .btn-primary:hover {
   background: var(--acc-light); transform: translateY(-1px);
-  box-shadow: 0 0 0 1px rgba(34,211,238,0.5), 0 8px 32px rgba(6,182,212,0.38);
+  box-shadow: 0 0 0 1px rgba(125,198,192,0.5), 0 8px 32px rgba(95,179,172,0.38);
 }
 .btn-ghost {
   background: transparent; color: var(--t-2);
   border: 1px solid var(--bdr);
 }
 .btn-ghost:hover {
-  background: rgba(6,182,212,0.05); color: var(--t-1);
-  border-color: rgba(6,182,212,0.3);
+  background: rgba(95,179,172,0.05); color: var(--t-1);
+  border-color: rgba(95,179,172,0.3);
 }
 /* Hero large CTA buttons */
 .btn-hero-lg {
@@ -153,13 +161,13 @@ body.nav-open { overflow: hidden; }
 }
 /* Contact section CTA — white button on dark bg */
 .btn-contact {
-  background: #fff; color: var(--t-1);
+  background: var(--parchment); color: var(--t-1);
   font-weight: 700; font-size: 0.95rem; padding: 0.8rem 2rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 .btn-contact:hover {
-  background: #f0f9ff; transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  background: var(--parchment); transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2), 0 0 0 1px var(--tropical-teal);
 }
 .btn-linkedin {
   background: transparent; color: #fff;
@@ -182,8 +190,8 @@ body.nav-open { overflow: hidden; }
   overflow: hidden; padding: 7rem 0 5rem;
   /* Soft cyan blush from the top — like morning light through water */
   background:
-    radial-gradient(ellipse 100% 55% at 50% -5%, rgba(6,182,212,0.1) 0%, transparent 60%),
-    #ffffff;
+    radial-gradient(ellipse 100% 55% at 50% -5%, rgba(95,179,172,0.1) 0%, transparent 60%),
+    var(--parchment);
 }
 
 /* Animated blobs — much softer on white */
@@ -195,18 +203,18 @@ body.nav-open { overflow: hidden; }
 }
 .orb-1 {
   width: 700px; height: 700px; opacity: 0.14;
-  background: radial-gradient(circle, #22d3ee 0%, #06b6d4 40%, transparent 70%);
+  background: radial-gradient(circle, #7DC6C0 0%, #5FB3AC 40%, transparent 70%);
   top: -20%; left: -15%; animation-duration: 20s;
 }
 .orb-2 {
   width: 600px; height: 600px; opacity: 0.09;
-  background: radial-gradient(circle, #0284c7 0%, #0369a1 40%, transparent 70%);
+  background: radial-gradient(circle, #084C61 0%, #052F3B 40%, transparent 70%);
   bottom: -18%; right: -12%;
   animation-duration: 14s; animation-delay: -6s;
 }
 .orb-3 {
   width: 420px; height: 420px; opacity: 0.06;
-  background: radial-gradient(circle, #06b6d4 0%, transparent 65%);
+  background: radial-gradient(circle, #5FB3AC 0%, transparent 65%);
   top: 50%; left: 50%; transform: translate(-50%, -50%);
   animation-duration: 10s; animation-delay: -9s;
 }
@@ -214,7 +222,7 @@ body.nav-open { overflow: hidden; }
 /* Dot grid — like a city map from above */
 .grid-overlay {
   position: absolute; inset: 0;
-  background-image: radial-gradient(circle, rgba(6,182,212,0.18) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(95,179,172,0.18) 1px, transparent 1px);
   background-size: 32px 32px;
   mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, black 20%, transparent 72%);
   -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, black 20%, transparent 72%);
@@ -237,14 +245,14 @@ body.nav-open { overflow: hidden; }
 }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 0.55rem;
-  background: rgba(6,182,212,0.08); border: 1px solid rgba(6,182,212,0.22);
+  background: rgba(217,79,26,0.08); border: 1px solid rgba(217,79,26,0.22);
   color: var(--acc); font-size: 0.8rem; font-weight: 600;
   padding: 0.35rem 0.9rem; border-radius: 999px;
   margin-bottom: 2rem; letter-spacing: 0.01em;
 }
 .badge-pulse {
   width: 7px; height: 7px; border-radius: 50%;
-  background: var(--acc-mid); flex-shrink: 0;
+  background: var(--spicy-paprika); flex-shrink: 0;
   animation: pulse 2.4s ease-in-out infinite;
 }
 .hero-content h1 {
@@ -252,13 +260,13 @@ body.nav-open { overflow: hidden; }
   font-weight: 900; letter-spacing: -0.04em; line-height: 1.07;
   margin-bottom: 1.4rem; color: var(--t-1);
 }
-/* Dark cyan → bright cyan → dark cyan: a beam scanning through text */
+/* Spicy Paprika shimmer — warm scan over Jet Black headings */
 .gradient-text {
   background: linear-gradient(
     105deg,
-    var(--acc) 0%,
-    var(--acc-light) 40%,
-    var(--acc) 80%
+    #D94F1A 0%,
+    #F08558 40%,
+    #D94F1A 80%
   );
   background-size: 200% auto;
   -webkit-background-clip: text; background-clip: text;
@@ -292,11 +300,11 @@ body.nav-open { overflow: hidden; }
 .proof-item-tags { gap: 0.4rem; }
 .proof-tag {
   font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em;
-  color: var(--acc); background: rgba(6,182,212,0.08);
-  border: 1px solid rgba(6,182,212,0.2);
+  color: var(--acc); background: rgba(217,79,26,0.08);
+  border: 1px solid rgba(217,79,26,0.22);
   padding: 0.18rem 0.55rem; border-radius: 999px;
 }
-.proof-tag-gold { color: #a16207; background: rgba(212,168,67,0.1); border-color: rgba(212,168,67,0.3); }
+.proof-tag-gold { color: #A63E15; background: rgba(217,79,26,0.1); border-color: rgba(217,79,26,0.3); }
 .proof-tag-blue { color: var(--acc); }
 .proof-sep { width: 1px; height: 18px; background: var(--bdr); }
 
@@ -309,7 +317,7 @@ body.nav-open { overflow: hidden; }
   letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--acc); margin-bottom: 0.75rem;
 }
-.section-label-inv { color: rgba(103,232,249,0.75); }
+.section-label-inv { color: rgba(179,221,216,0.75); }
 .section-header h2 { font-size: clamp(1.85rem, 3.6vw, 2.7rem); margin-bottom: 1rem; }
 .section-sub { font-size: 1.05rem; color: var(--t-2); max-width: 600px; margin: 0 auto; line-height: 1.77; }
 
@@ -356,7 +364,7 @@ body.nav-open { overflow: hidden; }
 }
 .benefits-icon-wrap {
   width: 34px; height: 34px; border-radius: var(--radius-xs);
-  background: rgba(6,182,212,0.08); border: 1px solid rgba(6,182,212,0.18);
+  background: rgba(95,179,172,0.08); border: 1px solid rgba(95,179,172,0.18);
   display: flex; align-items: center; justify-content: center;
   color: var(--acc); flex-shrink: 0;
 }
@@ -364,7 +372,7 @@ body.nav-open { overflow: hidden; }
 .benefits-list li { display: flex; gap: 1rem; align-items: flex-start; }
 .check-icon {
   width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; margin-top: 2px;
-  background: rgba(6,182,212,0.1); border: 1px solid rgba(6,182,212,0.25);
+  background: rgba(95,179,172,0.1); border: 1px solid rgba(95,179,172,0.25);
   display: flex; align-items: center; justify-content: center; position: relative;
 }
 .check-icon::after {
@@ -380,7 +388,7 @@ body.nav-open { overflow: hidden; }
 .toggle-switch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .toggle-track {
   position: relative; width: 210px; height: 44px; border-radius: 999px;
-  background: rgba(6,182,212,0.05); border: 1px solid var(--bdr);
+  background: rgba(95,179,172,0.05); border: 1px solid var(--bdr);
   display: flex; align-items: center;
 }
 .tog-opt {
@@ -392,8 +400,8 @@ body.nav-open { overflow: hidden; }
 .toggle-knob {
   position: absolute; top: 4px; left: 4px;
   width: calc(50% - 8px); height: calc(100% - 8px);
-  border-radius: 999px; background: rgba(6,182,212,0.12);
-  border: 1px solid rgba(6,182,212,0.3);
+  border-radius: 999px; background: rgba(95,179,172,0.12);
+  border: 1px solid rgba(95,179,172,0.3);
   transition: left 0.26s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .toggle-switch input:checked + .toggle-track .toggle-knob { left: calc(50% + 4px); }
@@ -408,14 +416,14 @@ body.nav-open { overflow: hidden; }
 }
 .member-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(6,182,212,0.3);
+  border-color: rgba(95,179,172,0.3);
   box-shadow: var(--card-shadow-h);
 }
 .member-avatar {
   width: 68px; height: 68px; border-radius: 50%;
   display: block; object-fit: cover;
   margin: 0 auto 1rem;
-  box-shadow: 0 4px 16px rgba(6,182,212,0.3);
+  box-shadow: 0 4px 16px rgba(95,179,172,0.3);
 }
 .member-card h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem; letter-spacing: -0.01em; }
 .member-card p  { font-size: 0.78rem; color: var(--t-3); margin: 0; }
@@ -430,7 +438,7 @@ body.nav-open { overflow: hidden; }
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .award-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
-.award-gold { border-color: rgba(212,168,67,0.3); }
+.award-gold { border-color: rgba(217,79,26,0.3); }
 .award-photo-wrap { position: relative; overflow: hidden; }
 .award-photo { width: 100%; height: 190px; object-fit: cover; display: block; }
 .award-rank-badge {
@@ -449,14 +457,14 @@ body.nav-open { overflow: hidden; }
 /* ── Contact — deep navy anchor at the base of the page ─────────────── */
 .contact-section {
   position: relative; text-align: center; overflow: hidden;
-  background: #07192a;  /* deep cool navy — sharp contrast from white */
+  background: var(--jet-black);  /* deep teal-black — sharp contrast from parchment */
 }
 .contact-glow {
   position: absolute; inset: 0; z-index: 0;
-  background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(6,182,212,0.12) 0%, transparent 65%);
+  background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(95,179,172,0.12) 0%, transparent 65%);
 }
 .contact-inner { position: relative; z-index: 1; }
-.contact-section .section-label { color: rgba(103,232,249,0.7); }
+.contact-section .section-label { color: rgba(179,221,216,0.7); }
 .contact-section h2 {
   font-size: clamp(1.9rem, 3.8vw, 2.9rem); color: #fff;
   margin-bottom: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;
@@ -490,8 +498,8 @@ footer { border-top: 1px solid var(--bdr); padding: 1.5rem 0; background: var(--
   to   { transform: translate(20px, -24px) scale(1.04); }
 }
 @keyframes pulse {
-  0%, 100% { opacity: 1;   box-shadow: 0 0 0 0   rgba(6,182,212,0.5); }
-  50%       { opacity: 0.5; box-shadow: 0 0 0 6px rgba(6,182,212,0);   }
+  0%, 100% { opacity: 1;   box-shadow: 0 0 0 0   rgba(217,79,26,0.5); }
+  50%       { opacity: 0.5; box-shadow: 0 0 0 6px rgba(217,79,26,0);   }
 }
 @keyframes shimmer { to { background-position: 200% center; } }
 @keyframes scrollDrop {
@@ -521,7 +529,7 @@ footer { border-top: 1px solid var(--bdr); padding: 1.5rem 0; background: var(--
   nav#nav-links  {
     display: flex; position: fixed;
     top: 0; left: 0; right: 0;
-    background: rgba(255,255,255,0.98);
+    background: rgba(245,243,239,0.98);
     backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid var(--bdr);
     flex-direction: column; padding: 5rem 1.25rem 1.25rem;
